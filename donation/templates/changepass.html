@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header %}
+    <header class="header--main-page">
+{% endblock %}
+{%  block header_content %}
+    <div class="slogan container container--90">
+        <div class="slogan--item">
+                <div>
+                <form class="pass_form" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input class="btn btn--without-border" type="submit" value="Send" >
+                </form>
+                </div>
+        </div>
+    </div>
+{% endblock %}
